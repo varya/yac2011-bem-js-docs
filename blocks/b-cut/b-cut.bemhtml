@@ -1,0 +1,30 @@
+block b-cut {
+
+    js: true
+
+    elem opener, default, !this.ctx._wrap: {
+        local (
+            this._mode='',
+            this.ctx = {
+                block: 'b-link',
+                mix: [{ block: 'b-cut', elem: 'opener', elemMods: { visibility: 'visible'}}],
+                mods: { pseudo: 'yes' },
+                content: this.ctx.content
+            }
+        ) this.apply()
+    }
+
+    elem content {
+        mix: [
+            {
+                block: 'b-cut',
+                js: this.ctx.js || this._bCutJs
+            }
+        ]
+        content: [
+            { elem: 'close' },
+            this.ctx.content
+        ]
+    }
+
+}

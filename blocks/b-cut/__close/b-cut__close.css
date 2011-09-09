@@ -1,0 +1,23 @@
+.b-cut__close
+{
+    font: 0/0 a;
+
+    position: absolute;
+    z-index: 12;
+    top: 0;
+    left: 100%;
+
+    width: 14px;
+    height: 14px;
+    margin: 4px 0 0 -18px;
+
+    opacity: 0.7;
+    cursor: pointer;
+
+    background: url(b-cut__close.png) no-repeat;
+}
+
+.b-cut__close:hover
+{
+    opacity: 1;
+}
