@@ -7,27 +7,21 @@
         { block: 'i-jquery', elem: 'core'},
         { elem: 'js', url:'index.js'}
     ],
-    content: [
-        {
-            block: 'b-cut',
-            content: [
-                {
-                    elem: 'opener',
-                    content: 'открыть кат'
-                },
-                {
-                    elem: 'content',
-                    content: {
-                        block: 'b-text',
-                        content: [
-                            {
-                                elem: 'p',
-                                content: 'Мама мыла раму'
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
+    content: {
+        block: 'b-text',
+        content: [
+            {
+                elem: 'h1',
+                content: 'Первая страница'
+            },
+            {
+                elem: 'p',
+                content: 'Второй параграф'
+            },
+            {
+                elem: 'p',
+                content: 'Третий параграф'
+            }
+        ]
+    }
 })
