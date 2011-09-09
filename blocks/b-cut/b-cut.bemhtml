@@ -2,12 +2,22 @@ block b-cut {
 
     js: true
 
+    default: {
+        local(
+            this._mode = '',
+            this._bCutId = this.ctx.id || 'id-' + (Math.random() + '').substring(2, 10),
+            this._bCutJs = {id: this._bCutId },
+            this._bCutMods = this.ctx.mods,
+            this.ctx = this.ctx.content
+        ) this.apply()
+    }
+
     elem opener, default, !this.ctx._wrap: {
         local (
             this._mode='',
             this.ctx = {
                 block: 'b-link',
-                mix: [{ block: 'b-cut', elem: 'opener', elemMods: { visibility: 'visible'}}],
+                mix: [{ block: 'b-cut', js: this.ctx.js || this._bCutJs, mods: this._.extend(this._bCutMods, this.ctx.mods)}, { block: 'b-cut', elem: 'opener', elemMods: { visibility: 'visible'}}],
                 mods: { pseudo: 'yes' },
                 content: this.ctx.content
             }
@@ -18,7 +28,8 @@ block b-cut {
         mix: [
             {
                 block: 'b-cut',
-                js: this.ctx.js || this._bCutJs
+                js: this.ctx.js || this._bCutJs,
+                mods: this._.extend(this._bCutMods, this.ctx.mods)
             }
         ]
         content: [
