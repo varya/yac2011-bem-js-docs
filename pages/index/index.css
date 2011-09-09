@@ -1,0 +1,5 @@
+@import url(../../blocks/b-cut/b-cut.css);
+@import url(../../blocks/b-cut/__close/b-cut__close.css);
+@import url(../../bem-bl/blocks-desktop/b-link/b-link.css);
+@import url(../../bem-bl/blocks-desktop/b-link/_pseudo/b-link_pseudo_yes.css);
+@import url(../../bem-bl/blocks-desktop/b-text/b-text.css);
