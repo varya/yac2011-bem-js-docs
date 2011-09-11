@@ -12,17 +12,9 @@ block b-cut {
         ) this.apply()
     }
 
-    elem content {
-        mix: [
-            {
-                block: 'b-cut',
-                js: this.ctx.js || this._bCutJs
-            }
-        ]
-        content: [
-            { elem: 'close' },
-            this.ctx.content
-        ]
-    }
+    elem content, content: [
+        { elem: 'close' },
+        this.ctx.content
+    ]
 
 }
