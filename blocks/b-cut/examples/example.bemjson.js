@@ -12,7 +12,7 @@
                         content: [
                             {
                                 elem: 'p',
-                                content: 'Мама мыла раму'
+                                content: 'Содержание ката'
                             }
                         ]
                     }
