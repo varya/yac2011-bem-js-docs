@@ -1,5 +1,7 @@
 block b-cut {
 
+    js: true
+
     elem opener, default, !this.ctx._wrap: {
         local (
             this._mode='',
