@@ -1,21 +1,14 @@
+                    {
+                        block: 'b-cut',
+                        js: { id: 1},
+                        elem: 'opener',
+                        content: 'пример'
+                    }
+
+
             {
                 block: 'b-cut',
-                content: [
-                    {
-                        elem: 'opener',
-                        content: 'открыть кат'
-                    },
-                    {
-                        elem: 'content',
-                        content: {
-                            block: 'b-text',
-                            content: [
-                                {
-                                    elem: 'p',
-                                    content: 'Содержание ката'
-                                }
-                            ]
-                        }
-                    }
-                ]
+                js: { id: 1},
+                elem: 'content',
+                content: ''
             }
