@@ -7,7 +7,10 @@ BEM.DOM.decl('b-cut', {
 
     onSetMod : {
         'js' : function() {
-            BEM.blocks['b-link'].on(this.elem('opener'), 'click', this.open, this);
+            this.findBlockOn('opener', 'b-link').on(
+                'click',
+                this.open,
+                this);
         }
     },
     open : function() {
