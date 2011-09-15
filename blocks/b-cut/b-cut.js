@@ -1,4 +1,3 @@
-/** @requires BEM */
 /** @requires BEM.DOM */
 
 (function() {
@@ -13,12 +12,12 @@ BEM.DOM.decl('b-cut', {
     open : function() {
         this
             .setMod(this.elem('content'), 'visibility', 'visible')
-            .delMod(this.elem('opener'), 'visibility');
+            .setMod(this.elem('opener'), 'visibility', 'hidden');
     },
     close : function() {
         this
             .delMod(this.elem('content'), 'visibility')
-            .setMod(this.elem('opener'), 'visibility', 'visible');
+            .delMod(this.elem('opener'), 'visibility');
     }
 
 }, {
