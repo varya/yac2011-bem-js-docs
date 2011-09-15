@@ -4,8 +4,8 @@ all:: $(patsubst %.bemjson.js,%.html,$(wildcard pages/*/*.bemjson.js))
 BEM_BUILD=bem build \
 	-l bem-bl/blocks-common/ \
 	-l bem-bl/blocks-desktop/ \
-	-l blocks/ \
 	-l my-blocks/ \
+	-l blocks/ \
 	-l $(@D)/blocks \
 	-d $< \
 	-t $1 \

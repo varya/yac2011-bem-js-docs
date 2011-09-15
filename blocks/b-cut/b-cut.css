@@ -15,12 +15,12 @@
     display: block;
 }
 
-.b-cut__opener_visibility_hidden
-{
-    display: none;
-}
-
 .b-cut__opener
 {
     display: inline;
+}
+
+.b-cut__opener_visibility_hidden
+{
+    display: none;
 }
