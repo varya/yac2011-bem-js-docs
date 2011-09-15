@@ -5,7 +5,6 @@ BEM_BUILD=bem build \
 	-l bem-bl/blocks-common/ \
 	-l bem-bl/blocks-desktop/ \
 	-l blocks/ \
-	-l my-blocks/ \
 	-l $(@D)/blocks \
 	-d $< \
 	-t $1 \
@@ -53,4 +52,9 @@ DO_GIT=@echo -- git $1 $2; \
 bem-bl:
 	$(call DO_GIT,git://github.com/bem/bem-bl.git,$@)
 
-.PHONY: all
+.PRECIOUS: clean
+clean:
+	git clean -d -f
+	git checkout -b
+
+.PHONY: all clean
