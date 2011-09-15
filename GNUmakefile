@@ -55,6 +55,10 @@ bem-bl:
 .PRECIOUS: branches
 branches:
 	echo 'Getting all branches'
+	git branch --track v1-js remotes/origin/v1-js
+	git branch --track v2-js remotes/origin/v2-js
+	git branch --track v2-no remotes/origin/v2-no
+	git branch --track v2-templates remotes/origin/v2-templates
 
 .PRECIOUS: clean
 clean:
