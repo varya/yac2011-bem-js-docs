@@ -17,7 +17,7 @@ block b-cut {
             this._mode='',
             this.ctx = {
                 block: 'b-link',
-                mix: [{ block: 'b-cut', js: this.ctx.js || this._bCutJs, mods: this._.extend(this._bCutMods, this.ctx.mods)}, { block: 'b-cut', elem: 'opener'],
+                mix: [{ block: 'b-cut', js: this.ctx.js || this._bCutJs, mods: this._.extend(this._bCutMods, this.ctx.mods)}, { block: 'b-cut', elem: 'opener'}],
                 mods: { pseudo: 'yes' },
                 content: this.ctx.content
             }

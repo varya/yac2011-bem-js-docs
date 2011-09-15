@@ -20,27 +20,28 @@
                 elem: 'h2', content: 'Декларация блока'
             },
             {
-                elem: 'p', content: 'Декларативность проявляется в объявлении того, к каким блокам или их модификациям применим код компонента.'
+                elem: 'p', content: [
+                    'Декларативность проявляется в объявлении того, к каким блокам или их модификациям применим код компонента. ',
+                    {
+                        block: 'b-cut',
+                        js: { id: 1 },
+                        elem: 'opener',
+                        content: 'пример'
+                    }
+                ]
             },
             {
                 block: 'b-cut',
-                content: [
-                    {
-                        elem: 'opener',
-                        content: 'открыть кат'
-                    },
-                    {
-                        elem: 'content',
-                        content: {
-                            block: 'b-text',
-                            content: [
-                                {
-                                    elem: 'pre', content: "BEM.DOM.decl({name: 'b-link', modName: 'pseudo', modVal: 'yes}, {\n\    ...\n\nBEM.DOM.decl('i-menu', {\n    ..."
-                                }
-                            ]
+                js: {id: 1 },
+                elem: 'content',
+                content: {
+                    block: 'b-text',
+                    content: [
+                        {
+                            elem: 'pre', content: "BEM.DOM.decl({name: 'b-link', modName: 'pseudo', modVal: 'yes}, {\n\    ...\n\nBEM.DOM.decl('i-menu', {\n    ..."
                         }
-                    }
-                ]
+                    ]
+                }
             },
             {
                 elem: 'h2', content: 'Реакция на изменение модификаторов'
