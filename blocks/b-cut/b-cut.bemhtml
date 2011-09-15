@@ -5,7 +5,6 @@ block b-cut {
             this._mode='',
             this.ctx = {
                 block: 'b-link',
-                mix: [{ block: 'b-cut', elem: 'opener', elemMods: { visibility: 'visible'}}],
                 mods: { pseudo: 'yes' },
                 content: this.ctx.content
             }
