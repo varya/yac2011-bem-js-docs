@@ -57,4 +57,8 @@ clean:
 	git clean -d -f
 	git checkout -f
 
-.PHONY: all clean
+.PRECIOUS: next
+next: clean
+	git checkout v1-js
+
+.PHONY: all clean next
