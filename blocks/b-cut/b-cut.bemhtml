@@ -6,6 +6,7 @@ block b-cut {
             this.ctx = {
                 block: 'b-link',
                 mods: { pseudo: 'yes' },
+                mix: [{block: 'b-cut', elem: 'opener'}],
                 content: this.ctx.content
             }
         ) this.apply()
