@@ -23,7 +23,7 @@
                 elem: 'p', content: 'Декларативность проявляется в объявлении того, к каким блокам или их модификациям применим код компонента.'
             },
             {
-                elem: 'pre', content: "BEM.DOM.decl({name: 'b-link', modName: 'pseudo', modVal: 'yes}, {\n\    ...\n\nBEM.DOM.decl('i-menu', {\n    ..."
+                elem: 'pre', content: "BEM.DOM.decl({name: 'b-link', modName: 'pseudo', modVal: 'yes'}, {\n\    ...\n\nBEM.DOM.decl('i-menu', {\n    ..."
             },
             {
                 elem: 'h2', content: 'Реакция на изменение модификаторов'
