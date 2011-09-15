@@ -55,6 +55,6 @@ bem-bl:
 .PRECIOUS: clean
 clean:
 	git clean -d -f
-	git checkout -b
+	git checkout -f
 
 .PHONY: all clean
