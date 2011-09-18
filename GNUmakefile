@@ -53,4 +53,21 @@ DO_GIT=@echo -- git $1 $2; \
 bem-bl:
 	$(call DO_GIT,git://github.com/bem/bem-bl.git,$@)
 
-.PHONY: all
+BRANCHES=$(shell git branch -a | grep remotes | grep -v HEAD | grep -v v1-no-js)
+
+.PRECIOUS: branches
+branches:
+	for branch in $(BRANCHES); do \
+		git branch --track $${branch##*/} $$branch; \
+	done
+
+.PRECIOUS: clean
+clean:
+	git clean -d -f
+	git checkout -f
+
+.PRECIOUS: next
+next: clean
+	git checkout v1-no-js
+
+.PHONY: all clean next branches
