@@ -53,13 +53,13 @@ DO_GIT=@echo -- git $1 $2; \
 bem-bl:
 	$(call DO_GIT,git://github.com/bem/bem-bl.git,$@)
 
+BRANCHES=$(shell git branch -a | grep remotes | grep -v HEAD | grep -v v1-no-js)
+
 .PRECIOUS: branches
 branches:
-	echo 'Getting all branches'
-	git branch --track v1-js remotes/origin/v1-js
-	git branch --track v2-js remotes/origin/v2-js
-	git branch --track v2-no remotes/origin/v2-no
-	git branch --track v2-templates remotes/origin/v2-templates
+	for branch in $(BRANCHES); do \
+		git branch --track $${branch##*/} $$branch; \
+	done
 
 .PRECIOUS: clean
 clean:
